@@ -87,7 +87,7 @@ Please read the [Installation](#installation) section for more details, especial
 
 In long-read assembled bacterial genomes, small plasmids are difficult to assemble correctly with long read assemblers. They commonly have circularisation issues and can be duplicated or missed (see [this](https://doi.org/10.1371/journal.pcbi.1010905), [this](https://f1000research.com/articles/8-2138) and [this](https://github.com/rrwick/Trycycler/wiki/Clustering-contigs)). This recent [paper](https://www.microbiologyresearch.org/content/journal/mgen/10.1099/mgen.0.001024) in _Microbial Genomics_ by Johnson et al also suggests that long read assemblers particularly miss small plasmids.
 
-`plassembler` was therefore created as a fast automated tool to ensure plasmids are assembled correctly without duplicated regions for high-throughput uses - like Unicycler but a lot laster - and to provide some useful statistics as well (such as estimate plasmid copy numbers for both long and short read sets).  
+`plassembler` was therefore created as a fast automated tool to ensure plasmids are assembled correctly without duplicated regions for high-throughput uses - like Unicycler but a lot faster - and to provide some useful statistics as well (such as estimate plasmid copy numbers for both long and short read sets).  
 
 As it turns out (though this wasn't a motivation for making it), `plassembler` also recovers more small plasmids than the existing gold standard tool Unicycler. I think this is because it throws away chromosomal reads, similar to subsampling short reads sets which can improve recovery. As there are more plasmid reads a proportion of the overall read set, there seems to be a higher chance of recovering smaller plasmids.
 
